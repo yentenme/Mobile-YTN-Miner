@@ -4,19 +4,22 @@ Install iSH (through testlight): https://ish.app
 
 apk add git #if you want to grab code from github
 apk add openssh # alternative I use at home to copy the code using scp in dev mode
-apk add python python-dev py-setuptools
-apk add gcc
+apk add python python-dev 
+apk add gcc bash
 apk add musl-dev
 
 
 
 git clone ... or copy code
 cd <dir>
+chmod +x buildme.sh
 ./buildme.sh
 
 ./go.sh
 
 just edit ni.sh and ni2.sh to change YTN miner address.
+
+There is a lot of hardcoding, but it works.
 
 NOTE: This was able to mine above 1.5 H/s on iPhone7 ice-cooled (otherwise, it can fall below 0.5 H/s). Yes, your phone will overheat.
 
